@@ -11,6 +11,31 @@
     <p>Моя первая веб-страница через GitHub и VS Code работает!</p>
     <!-- Ваша картинка из папки images -->
     <img src="images/chrisnadycat.png" alt="Моя картинка" width="400">
-    <p><em>Ну красота же</em></p>
+    <div class="caption">Ну красота же</div>
+        
+        <div class="highlight">✨ Сделано с любовью и Git ✨</div>
+        
+        <div class="counter-section">
+            <button id="clickButton">Нажми меня! 🖱️</button>
+            <p>Количество нажатий: <span id="clickCount">0</span></p>
+        </div>
+    </div>
+    
+    <script>
+        let count = 0;
+        const button = document.getElementById('clickButton');
+        const counterDisplay = document.getElementById('clickCount');
+        
+        button.addEventListener('click', function() {
+            count++;
+            counterDisplay.textContent = count;
+            
+            // Маленький эффект: меняем цвет счетчика
+            counterDisplay.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                counterDisplay.style.transform = 'scale(1)';
+            }, 200);
+        });
+    </script>
 </body>
 </html>
