@@ -1,4 +1,3 @@
-/* Мои стили */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #b0bdf4 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #9face9 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -16,21 +15,18 @@ body {
 }
 
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 40px;
     max-width: 600px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.container:hover {
-    transform: translateY(-5px);
 }
 
 h1 {
-    color: #ffffff;
+    color: white;
     font-size: 2.5em;
     margin-bottom: 15px;
     position: relative;
@@ -45,22 +41,25 @@ h1:after {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: linear-gradient(135deg, #859af5, #764ba2);
+    background: white;
     border-radius: 3px;
 }
 
 p {
-    color: #ffffff;
+    color: white;
     line-height: 1.8;
     margin: 20px 0;
 }
 
 img {
+    width: auto;
     max-width: 100%;
+    height: auto;
     border-radius: 15px;
-    margin: 20px 0;
+    margin: 20px auto;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
+    display: block;
 }
 
 img:hover {
@@ -69,30 +68,31 @@ img:hover {
 
 .caption {
     font-style: italic;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.9em;
     margin-top: -10px;
 }
 
 .highlight {
-    background: linear-gradient(135deg, #9aa9ea, #764ba2);
+    background: rgba(255, 255, 255, 0.2);
     color: white;
     padding: 12px 24px;
     border-radius: 25px;
     display: inline-block;
     margin-top: 20px;
     font-weight: bold;
+    backdrop-filter: blur(5px);
 }
 
 .counter-section {
     margin-top: 30px;
     padding: 20px;
-    border-top: 2px solid #eee;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 #clickButton {
-    background: linear-gradient(135deg, #90a1e9, #764ba2);
-    color: white;
+    background: white;
+    color: #764ba2;
     border: none;
     padding: 12px 30px;
     font-size: 1.1em;
@@ -114,7 +114,12 @@ img:hover {
 #clickCount {
     font-size: 1.5em;
     font-weight: bold;
-    color: #7df8fa;
+    color: white;
     display: inline-block;
     min-width: 40px;
+    transition: transform 0.2s;
+}
+
+.counter-section p {
+    color: white;
 }
