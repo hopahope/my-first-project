@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый проект</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой первый проект</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Привет, Кристина!</h1>
-    <p>Моя первая веб-страница через GitHub и VS Code работает!</p>
-    <!-- Ваша картинка из папки images -->
-    <img src="images/chrisnadycat.png" alt="Моя картинка" width="400">
-    <div class="caption">Ну красота же</div>
-        
-        <div class="highlight">✨ Сделано с любовью и Git ✨</div>
-        
-        <div class="counter-section">
+  <main class="page">
+    <section class="card">
+      <div class="content">
+        <div class="text-block">
+          <span class="badge">Мой первый сайт</span>
+          <h1>Привет, Кристина! 💜</h1>
+          <p class="subtitle">
+            Моя первая веб-страница через GitHub и VS Code работает!
+          </p>
+
+          <p class="description">
+            Я сделала этот сайт, чтобы разобраться с HTML, CSS, Git и GitHub Pages.
+            Это маленький, но очень важный первый шаг в веб-разработке ✨
+          </p>
+
+          <div class="highlight">✨ Сделано с любовью и Git ✨</div>
+
+          <div class="counter-section">
             <button id="clickButton">Нажми меня! 🖱️</button>
-            <p>Количество нажатий: <span id="clickCount">0</span></p>
+            <p class="counter-text">
+              Количество нажатий: <span id="clickCount">0</span>
+            </p>
+          </div>
         </div>
-    </div>
-    
-    <script>
-        let count = 0;
-        const button = document.getElementById('clickButton');
-        const counterDisplay = document.getElementById('clickCount');
-        
-        button.addEventListener('click', function() {
-            count++;
-            counterDisplay.textContent = count;
-            
-            // Маленький эффект: меняем цвет счетчика
-            counterDisplay.style.transform = 'scale(1.2)';
-            setTimeout(() => {
-                counterDisplay.style.transform = 'scale(1)';
-            }, 200);
-        });
-    </script>
+
+        <figure class="image-block">
+          <img src="images/chrisnadycat.png" alt="Моя картинка">
+          <figcaption>Ну красота же 😍</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let count = 0;
+    const button = document.getElementById('clickButton');
+    const counterDisplay = document.getElementById('clickCount');
+
+    button.addEventListener('click', function () {
+      count++;
+      counterDisplay.textContent = count;
+
+      counterDisplay.classList.add('pulse');
+      setTimeout(() => {
+        counterDisplay.classList.remove('pulse');
+      }, 200);
+    });
+  </script>
 </body>
 </html>
